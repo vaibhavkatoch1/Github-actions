@@ -29,12 +29,12 @@ jobs:
 
       - name: Deploying docker compose
         run: |
-          eb init -p docker voting-app1
+          eb init -p docker voting-app
 
       # Create the Elastic Beanstalk environment hsih
       - name: Create test environment
         run: |
-          eb create app-environment
+          eb create app1-environment
       
       - name: Deploying docker compose
         run: |
