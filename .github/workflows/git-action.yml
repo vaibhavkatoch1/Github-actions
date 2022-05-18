@@ -15,7 +15,7 @@ jobs:
         run: docker-compose up -d
 
       # Elastic Beanstalk CLI version
-      - name: Get EB CLI version
+      - name: Get EB CLI version 
         run: |
           python -m pip install --upgrade pip
           pip install awsebcli --upgrade
@@ -34,8 +34,8 @@ jobs:
       # Create the Elastic Beanstalk environment
       - name: Create test environment
         run: |
-          eb create app2-environment
+          eb create app-new-v-environment
       
       - name: Deploying docker compose
         run: |
-          eb open app2-environment
+          eb open app-new-v-environment
