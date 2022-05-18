@@ -31,7 +31,7 @@ jobs:
         run: |
           eb init -p docker voting-app1
 
-      # Create the Elastic Beanstalk environment hsih
+      # Create the Elastic Beanstalk environment
       - name: Create test environment
         run: |
           eb create app2-environment
