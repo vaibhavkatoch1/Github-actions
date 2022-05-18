@@ -29,13 +29,17 @@ jobs:
 
       - name: Deploying docker compose
         run: |
-          eb init -p docker voting-app1
+          eb init -p docker voting-app2
 
       # Create the Elastic Beanstalk environment
       - name: Create blue environment
         run: |
-          eb create app-blue-environment
+          eb create app-green-environment
       
       - name: Deploying docker compose
         run: |
-          eb open app-blue-environment
+          eb open app-green-environment
+
+      - name: Swapping blue env with green
+        run: |
+          eb swap app-green-environment --destination_name app-blue-environment
