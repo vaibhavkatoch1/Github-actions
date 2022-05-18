@@ -32,10 +32,10 @@ jobs:
           eb init -p docker voting-app1
 
       # Create the Elastic Beanstalk environment
-      - name: Create test environment
+      - name: Create blue environment
         run: |
-          eb create app-new-v-environment
+          eb create app-blue-environment
       
       - name: Deploying docker compose
         run: |
-          eb open app-new-v-environment
+          eb open app-blue-environment
