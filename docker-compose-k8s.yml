@@ -15,7 +15,7 @@ services:
   vote:
     image: dockersamples/examplevotingapp_vote:before
     ports:
-      - "5000:80"
+      - "80:80"
     deploy:
       replicas: 1
   result:
