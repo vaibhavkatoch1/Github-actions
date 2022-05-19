@@ -32,7 +32,7 @@ jobs:
           eb init -p docker voting-app2
 
       # Create the Elastic Beanstalk environment
-      - name: Create blue environment
+      - name: Create green environment
         run: |
           eb create app-green-environment
       
@@ -40,6 +40,6 @@ jobs:
         run: |
           eb open app-green-environment
 
-      - name: Swapping blue env with green
+      - name: Swapping blue env with green environment
         run: |
           eb swap app-green-environment --destination_name app-blue-environment
